@@ -7,3 +7,5 @@
 ./structural-design-patterns/composite/*.js
 
 **/node_modules
+
+**/packag-lock.json
