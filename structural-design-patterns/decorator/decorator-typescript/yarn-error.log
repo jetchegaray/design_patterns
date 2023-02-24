@@ -1,0 +1,42 @@
+Arguments: 
+  /usr/local/bin/node /home/javimetal/.yarn/bin/yarn.js add --dev nodemon ts-node
+
+PATH: 
+  /home/javimetal/.yarn/bin:/home/javimetal/.config/yarn/global/node_modules/.bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/javimetal/.local/bin:/home/javimetal/.yarn/bin:/home/javimetal/.config/yarn/global/node_modules/.bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/javimetal/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/javimetal/Android/Sdk/emulator:/home/javimetal/Android/Sdk/platform-tools:/home/javimetal/Android/Sdk/emulator:/home/javimetal/Android/Sdk/platform-tools
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/javimetal/workspace/design-pattern/structural-design-patterns/decorator-typescript/package.json: Unexpected token { in JSON at position 142
+      at JSON.parse (<anonymous>)
+      at /home/javimetal/.yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/home/javimetal/.yarn/lib/cli.js:310:30)
+      at /home/javimetal/.yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "devDependencies": {
+      "@types/node": "^18.14.1",
+      "nodemon": "^2.0.20",
+      "ts-node": "^10.9.1",
+      "typescript": "^4.9.5"
+    },
+    {
+      "start" :"rm -rf dist/ && tsc --project . && node dist/app.js",
+      "dev": "nodemon ."
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
