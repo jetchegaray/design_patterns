@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "lokidb": "^0.0.3-beta.2",
+    "lokijs": "^1.5.12",
+    "lowdb": "^5.1.0",
+    "lowdb-node": "^3.0.2"
+  }
+}

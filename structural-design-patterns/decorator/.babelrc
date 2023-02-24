@@ -1,0 +1,16 @@
+{
+  "plugins": [
+    ["@babel/plugin-trasform-runtime"],
+    ["@babel/plugin-proposal-decorator", { "legacy": true }]
+  ],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ]
+}

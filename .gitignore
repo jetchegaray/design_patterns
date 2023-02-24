@@ -1,0 +1,9 @@
+./core-design-patterns/builder/*.js
+./core-design-patterns/factory/*.js
+./core-design-patterns/factory_abstract/*.js
+
+./core-design-patterns/singleton_classes/*.js
+
+./structural-design-patterns/composite/*.js
+
+**/node_modules
