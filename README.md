@@ -38,19 +38,18 @@ Singleton are objects that can only can have one single instance, a only source 
 
 ## Module design pattern
   ## Revealing module pattern for javascript not typescript 
-    Javascript does not provide  a private scope like java or typescript , it offers just the function scope which is private unles specically exposed. 
-    In the browser you can use a global variable or using inmediately invoked functions expression IFFE, node module system implements the revealing module natively, using export you can make public whichever functions you want.  
+  Javascript does not provide  a private scope like java or typescript , it offers just the function scope which is private unles specically exposed.In the browser you can use a global variable or using inmediately invoked functions expression IFFE, node module system implements the revealing module natively, using export you can make public whichever functions you want. 
     When usign ES6 classes, we can use Symbol to implement private methods
     
- ## Dependency Injection 
-    The problem with tightly coupled  modules
-      - hardwiring multiple dependencies
-      - hardwired dependencies make ir difficult to change a dependency later
-      - we might to refactor a lot of code 
-      - never write higly cohesive and tightly coupled modules 
-    Benefits 
-      - we may end up refactoring large bits of code
-      - tightly coupled modules can pose serious problems when a dependency needs to be changed or replaced.
+  ## Dependency Injection 
+  The problem with tightly coupled  modules
+  - hardwiring multiple dependencies
+  - hardwired dependencies make ir difficult to change a dependency later
+  - we might to refactor a lot of code 
+  - never write higly cohesive and tightly coupled modules 
+  Benefits 
+  - we may end up refactoring large bits of code
+  - tightly coupled modules can pose serious problems when a dependency needs to be changed or replaced.
       
  ## Estructural Design pattern
    ### Proxy 
@@ -70,33 +69,31 @@ Singleton are objects that can only can have one single instance, a only source 
    
   ### Decorator
   the idea is add new functionality, attach it dinamically, provides flexibility for subclasses for extending functionlity. it is used for REACT.js in the high order component HOC , giving to the component extra abilities.
-    - ingest a function a return another function
-    - decorator can be used to add features and function to exiting objects dynamically 
-    - implemented as higher order function   -- decoratorSignature for typescript but it can be used for JS as well (tagetClass: any, propertyKey:string, descriptor:  PropertyDescriptor)
-    - TC39 has proposed the decorator sintax @decorator for use classes and class method . In typescript we need to uncomment the #experimentalDecorator :true in the tsconfig.json  
-    - In node there is another alernative we can use babel compiler https://babeljs.io/docs/babel-plugin-proposal-decorators  and  parcel bundle https://github.com/parcel-bundler 
+  - ingest a function a return another function
+  - decorator can be used to add features and function to exiting objects dynamically 
+  - implemented as higher order function   -- decoratorSignature for typescript but it can be used for JS as well (tagetClass: any, propertyKey:string, descriptor:  PropertyDescriptor)
+  - TC39 has proposed the decorator sintax @decorator for use classes and class method . In typescript we need to uncomment the #experimentalDecorator :true in the tsconfig.json  
+  - In node there is another alernative we can use babel compiler https://babeljs.io/docs/babel-plugin-proposal-decorators  and  parcel bundle https://github.com/parcel-bundler 
     
     
   ### Composite
   compose objects intro three structures to represent hierarchies. composite lets clients treat individual objects and composition of objects uniformly 
-    - component (base)
-    - leaf (instance of the base) => indivual objects, cannot contain child leaves 
-    - composite (instance of the base) => collection of leaves, collection of composites
+  - component (base)
+  - leaf (instance of the base) => indivual objects, cannot contain child leaves 
+  - composite (instance of the base) => collection of leaves, collection of composites
+  - a leaf or a single entity like a product or person
+  - a composite that contains collections of entities
+  - composites can also be collection of composites
     
-    - a leaf or a single entity like a product or person
-    - a composite that contains collections of entities
-    - composites can also be collection of composites
     
-    
-  
   ## Messaging pattern 
-    It is for one way communication using standars such as https, websockets, main & child processes , it uses an identifier for each request the correlation id, it should sent it back within the reply . it could be sent as a header X-Correlation-ID or in the message payload. It is a way to differenciate clients 
-    - it is a one-way messaging pattern
-    - in the example the client sends a "request" message to the server, which reponse back with a "reply".
-    - this pattern involves the use of a unique correlation id for every request 
-    - the correlation identifier is sent back to the client in the reply and is used to correlate the request and reply 
-    - a return address may also incorporated if multiple clients are involved 
-    - can be used with message brokers such as rabbitMQ to enable multiple apps to comunicate with each other effectively 
+  It is for one way communication using standars such as https, websockets, main & child processes , it uses an identifier for each request the correlation id, it should sent it back within the reply . it could be sent as a header X-Correlation-ID or in the message payload. It is a way to differenciate clients 
+  - it is a one-way messaging pattern
+  - in the example the client sends a "request" message to the server, which reponse back with a "reply".
+  - this pattern involves the use of a unique correlation id for every request 
+  - the correlation identifier is sent back to the client in the reply and is used to correlate the request and reply 
+  - a return address may also incorporated if multiple clients are involved 
+  - can be used with message brokers such as rabbitMQ to enable multiple apps to comunicate with each other effectively 
     
   
   
