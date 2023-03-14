@@ -86,8 +86,9 @@ Singleton are objects that can only can have one single instance, a only source 
   - composites can also be collection of composites
     
     
-  ## Messaging pattern 
-  It is for one way communication using standars such as https, websockets, main & child processes , it uses an identifier for each request the correlation id, it should sent it back within the reply . it could be sent as a header X-Correlation-ID or in the message payload. It is a way to differenciate clients 
+## Messaging pattern 
+  ### Request-reply  
+It is for one way communication using standars such as https, websockets, main & child processes , it uses an identifier for each request the correlation id, it should sent it back within the reply . it could be sent as a header X-Correlation-ID or in the message payload. It is a way to differenciate clients 
   - it is a one-way messaging pattern
   - in the example the client sends a "request" message to the server, which reponse back with a "reply".
   - this pattern involves the use of a unique correlation id for every request 
@@ -95,6 +96,10 @@ Singleton are objects that can only can have one single instance, a only source 
   - a return address may also incorporated if multiple clients are involved 
   - can be used with message brokers such as rabbitMQ to enable multiple apps to comunicate with each other effectively 
     
+ ###  Publisher-subscriber  
+ in this example I will use a mesaage broker as RabbitMQ https://rabbitmq.com/ .. you need it installed in your box as a precondition to run the example. I will define a basic publisher and a subscriber to comunicate to eachother trought the channel of the broker 
+  - Useful when you work with microservices or Serverless arqutectures 
+  - Message deliverability may post issues if the broker goes down, missconfigured or crashed. 
   
   
    
