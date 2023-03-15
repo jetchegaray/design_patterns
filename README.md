@@ -97,7 +97,8 @@ It is for one way communication using standars such as https, websockets, main &
   - can be used with message brokers such as rabbitMQ to enable multiple apps to comunicate with each other effectively 
     
  ###  Publisher-subscriber  
- in this example I will use a mesaage broker as RabbitMQ https://rabbitmq.com/ .. you need it installed in your box as a precondition to run the example. I will define a basic publisher and a subscriber based on https://www.rabbitmq.com/tutorials/tutorial-three-javascript.html  to comunicate to eachother trought the channel of the broker 
+ in this example I will use a mesaage broker as RabbitMQ https://rabbitmq.com/ .. you need it installed in your box as a precondition to run the example. I will define a basic publisher and a subscriber based on https://www.rabbitmq.com/tutorials/tutorial-three-javascript.html  to comunicate to eachother trought the channel of the broker.The core idea in the messaging model in RabbitMQ is that the producer never sends any messages directly to a queue. Actually, quite often the producer doesn't even know if a message will be delivered to any queue at all.
+Instead, the producer can only send messages to an exchange. An exchange is a very simple thing. On one side it receives messages from producers and the other side it pushes them to queues. The exchange must know exactly what to do with a message it receives. Should it be appended to a particular queue? Should it be appended to many queues? Or should it get discarded. The rules for that are defined by the exchange type.
   - Useful when you work with microservices or Serverless arqutectures 
   - Message deliverability may post issues if the broker goes down, missconfigured or crashed. 
   
