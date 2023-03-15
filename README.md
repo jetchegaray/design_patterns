@@ -97,7 +97,7 @@ It is for one way communication using standars such as https, websockets, main &
   - can be used with message brokers such as rabbitMQ to enable multiple apps to comunicate with each other effectively 
     
  ###  Publisher-subscriber  
- in this example I will use a mesaage broker as RabbitMQ https://rabbitmq.com/ .. you need it installed in your box as a precondition to run the example. I will define a basic publisher and a subscriber to comunicate to eachother trought the channel of the broker 
+ in this example I will use a mesaage broker as RabbitMQ https://rabbitmq.com/ ..based on https://www.rabbitmq.com/tutorials/tutorial-three-javascript.html  you need it installed in your box as a precondition to run the example. I will define a basic publisher and a subscriber to comunicate to eachother trought the channel of the broker 
   - Useful when you work with microservices or Serverless arqutectures 
   - Message deliverability may post issues if the broker goes down, missconfigured or crashed. 
   
