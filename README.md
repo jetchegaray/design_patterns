@@ -3,6 +3,26 @@
 this is a proyect to help anyone who needs it to refresh the most common patterns from Gang of four, you can find javascript, typescript and javascript on node
 the idea was give the person who wants to explore the project an idea of different escenarios on different sintaxis.
 
+## Table of Contents
+
+1. [Core design pattern](#Core-design-pattern)
+    - [Singleton](#Singleton)
+    - [Factory](#Factory)
+    - [Builder](#Builder)
+    - [Control flow patterns](#Control-flow-patterns)
+3. [Control flow patterns](#Control-flow-patterns)
+    - [Revealing module pattern for javascript not typescript](#Revealing-module-pattern-for-javascript-not-typescript) 
+    - [Dependency Injection](#Dependency-Injection)
+5. [Estructural Design pattern](#Estructural-design-pattern)
+    - [Proxy](#Proxy)
+    - [Adapater](#Adapater) 
+    - [Decorator](#Decorator)
+    - [Composite](#Composite)
+6. [Messaging pattern](#Messaging-pattern)
+    - [Request reply](#Request reply)
+    - [Publisher subscriber](#Publisher-subscriber)
+8. [Running the app](#Running-the-app)
+
 ## Core design pattern
 
 ### Singleton 
@@ -87,7 +107,7 @@ Singleton are objects that can only can have one single instance, a only source 
     
     
 ## Messaging pattern 
-  ### Request-reply  
+  ### Request reply  
 It is for one way communication using standars such as https, websockets, main & child processes , it uses an identifier for each request the correlation id, it should sent it back within the reply . it could be sent as a header X-Correlation-ID or in the message payload. It is a way to differenciate clients 
   - it is a one-way messaging pattern
   - in the example the client sends a "request" message to the server, which reponse back with a "reply".
@@ -96,11 +116,43 @@ It is for one way communication using standars such as https, websockets, main &
   - a return address may also incorporated if multiple clients are involved 
   - can be used with message brokers such as rabbitMQ to enable multiple apps to comunicate with each other effectively 
     
- ###  Publisher-subscriber  
+ ###  Publisher subscriber  
  in this example I will use a mesaage broker as RabbitMQ https://rabbitmq.com/ .. you need it installed in your box as a precondition to run the example. I will define a basic publisher and a subscriber based on https://www.rabbitmq.com/tutorials/tutorial-three-javascript.html  to comunicate to eachother trought the channel of the broker.The core idea in the messaging model in RabbitMQ is that the producer never sends any messages directly to a queue. Actually, quite often the producer doesn't even know if a message will be delivered to any queue at all.
 Instead, the producer can only send messages to an exchange. An exchange is a very simple thing. On one side it receives messages from producers and the other side it pushes them to queues. The exchange must know exactly what to do with a message it receives. Should it be appended to a particular queue? Should it be appended to many queues? Or should it get discarded. The rules for that are defined by the exchange type.
   - Useful when you work with microservices or Serverless arqutectures 
   - Message deliverability may post issues if the broker goes down, missconfigured or crashed. 
   
+### Installing 
+ you can use ts node 
+  ```
+   $ npm install -g ts-node typescript '@types/node'
+  ```
+  or just ts globally
+  ```
+  $ npm install -g typescript
+  ```
+  when you find a package.json inside a folder.. just run 
+  ```
+  $ npm install
+  ```
   
-   
+  
+### Running each pattern
+  There are different way to run each folder of one of each of the patterns. ç
+  If you find a nodedemon.js inside the folder 
+  
+  ```
+    $ nodemon 
+  ```
+  nodemon will run with a watch option. 
+  
+  if you find a tsconfig.json inside the proyect and no nodemon folder
+  ```
+  $ tsc app.ts | node app.js
+  ```
+  
+  if there it is not any of above just run node as usual 
+  ```
+  $ node app.js
+  ```
+  
