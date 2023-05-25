@@ -10,18 +10,19 @@ the idea was give the person who wants to explore the project an idea of differe
     - [Factory](#Factory)
     - [Builder](#Builder)
     - [Control flow patterns](#Control-flow-patterns)
-3. [Control flow patterns](#Control-flow-patterns)
+2. [Control flow patterns](#Control-flow-patterns)
     - [Revealing module pattern for javascript not typescript](#Revealing-module-pattern-for-javascript-not-typescript) 
     - [Dependency Injection](#Dependency-Injection)
-5. [Estructural Design pattern](#Estructural-design-pattern)
+3. [Estructural Design pattern](#Estructural-design-pattern)
     - [Proxy](#Proxy)
     - [Adapater](#Adapater) 
     - [Decorator](#Decorator)
     - [Composite](#Composite)
-6. [Messaging pattern](#Messaging-pattern)
+4. [Messaging pattern](#Messaging-pattern)
     - [Request reply](#Request reply)
     - [Publisher subscriber](#Publisher-subscriber)
-8. [Running the app](#Running-the-app)
+5. [Installing](#Installing)
+6. [Running each pattern](#Running-each-pattern)
 
 ## Core design pattern
 
